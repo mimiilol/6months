@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="extra.css">
+    <title>Vivian+Cavan</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text"></div> 
+    </div>
+
+    <script>
+        const div = document.querySelector(".text"); 
+        //add writing
+        const text = "Thank you cavan so much for everything I am so so so so so so grateful to have met you, and you've made the recent years just so much more amazing. I used to be so worried about growing up, getting a job and all that adult stuff, but tbh now that I've met you I feel excited to grow up and spend every day with you. No matter if its planned dates or just sitting together and yapping I love it all so much. Happy 6 months babe 💗.";
+
+        function testTypingEffect(element, text, i = 0) {
+            if (i === 0) {
+                element.textContent = ""; 
+            }
+            
+            element.textContent += text[i];
+
+            if (i === text.length - 1) {
+                return;
+            }
+
+            setTimeout(() => testTypingEffect(element, text, i + 1), 20); 
+        }
+        testTypingEffect(div, text);
+        document.addEventListener("click", function() {
+        });
+    </script>
+</body>
+</html>
